@@ -66,7 +66,7 @@ const Dashboard = () => {
         setProgress({});
         localStorage.setItem("progressLastReset", String(thisMonday));
         localStorage.setItem("userProgress", JSON.stringify({}));
-        axios.post(`http://localhost:5000/user/${userId}/progress`, { progress: {} });
+        axios.post(`https://fitnesslibrary.onrender.com/user/${userId}/progress`, { progress: {} });
       }
     }
   }, [userId]);
@@ -75,7 +75,7 @@ const Dashboard = () => {
   useEffect(() => {
     if (userId) {
       axios
-        .get(`http://localhost:5000/user/${userId}/progress`)
+        .get(`https://fitnesslibrary.onrender.com/user/${userId}/progress`)
         .then((res) => {
           setProgress(res.data.progress || {});
           localStorage.setItem("userProgress", JSON.stringify(res.data.progress || {}));
@@ -91,7 +91,7 @@ const Dashboard = () => {
   useEffect(() => {
     if (userId && progress !== null) {
       axios
-        .post(`http://localhost:5000/user/${userId}/progress`, { progress })
+        .post(`https://fitnesslibrary.onrender.com/user/${userId}/progress`, { progress })
         .then(() => {
           localStorage.setItem("userProgress", JSON.stringify(progress));
         })
