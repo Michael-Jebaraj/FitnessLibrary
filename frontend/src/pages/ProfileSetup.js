@@ -58,7 +58,7 @@ const ProfileSetup = () => {
 
     try {
       // Send to backend API
-      await axios.post("http://localhost:5000/register/details", {
+      await axios.post("https://fitnesslibrary.onrender.com/register/details", {
         userId,
         age: Number(form.age),
         height: Number(form.height),
