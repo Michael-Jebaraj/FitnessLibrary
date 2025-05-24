@@ -17,7 +17,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:5000/login", form);
+      const response = await axios.post("https://fitnesslibrary.onrender.com/login", form);
       saveUserProfile(response.data.user); // Save user data in localStorage for dashboard
       navigate("/dashboard");
     } catch (err) {
