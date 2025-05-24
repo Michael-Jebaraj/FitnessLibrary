@@ -28,7 +28,7 @@ const Register = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:5000/register", {
+      const response = await axios.post("https://fitnesslibrary.onrender.com/register", {
         name: form.name,
         email: form.email,
         password: form.password,
