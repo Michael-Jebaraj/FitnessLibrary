@@ -4,6 +4,7 @@ import axios from "axios";
 import { saveUserProfile } from "../utils/userProfile";
 import "./Home.css";
 import "./Login.css";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -71,7 +72,7 @@ const Login = () => {
         </form>
         <div className="login-links">
           <span>
-            New to FitnessLibrary? <a href="/register">Create account</a>
+            New to FitnessLibrary? <Link to="/register">Create account</Link>
           </span>
         </div>
       </div>
