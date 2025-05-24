@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+:root {
+  --primary-dark: #232848;
+  --primary-gradient: linear-gradient(110deg, #232848 0%, #354585 100%);
+  --accent-blue: #2e64ff;
+  --accent-orange: #ffb347;
+  --light-bg: #f6f7fa;
+  --section-bg: linear-gradient(100deg, #dbeafe 0%, #f6fff8 100%);
+}
+
+.legal-bg {
+  min-height: 100vh;
+  width: 100vw;
+  font-family: 'Inter', Arial, sans-serif;
+  background: var(--primary-gradient);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.legal-container {
+  background: var(--section-bg);
+  max-width: 820px;
+  width: 90vw;
+  margin: 24px auto;
+  padding: 48px 28px 36px 28px;
+  border-radius: 28px;
+  box-shadow: 0 4px 24px 0 #2e64ff13;
+  color: #232848;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.legal-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--accent-orange);
+  letter-spacing: 1.2px;
+  margin-bottom: 18px;
+  text-shadow: 1px 2px 4px #23284830;
+  text-align: center;
+}
+
+.legal-section-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  margin-top: 26px;
+  margin-bottom: 10px;
+  letter-spacing: 0.7px;
+}
+
+.legal-text {
+  font-size: 1.09rem;
+  color: #232848;
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+.legal-list {
+  margin-left: 24px;
+  padding-left: 0;
+  list-style-type: disc;
+  color: #232848;
+  font-size: 1.09rem;
+  line-height: 1.8;
+}
+.legal-list li {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 600px) {
+  .legal-container {
+    padding: 20px 8px 18px 8px;
+    border-radius: 13px;
+  }
+  .legal-title {
+    font-size: 1.3rem;
+  }
+  .legal-section-title {
+    font-size: 1rem;
+  }
+}

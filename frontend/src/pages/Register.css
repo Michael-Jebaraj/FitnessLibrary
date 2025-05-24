@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+.register-bg {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(110deg, #232848 0%, #2e64ff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center vertically */
+  font-family: 'Inter', Arial, sans-serif;
+  position: relative;
+}
+
+.register-container {
+  background: rgba(255,255,255,0.97);
+  border-radius: 30px;
+  box-shadow: 0 8px 32px 0 #2e64ff22;
+  padding: 44px 34px 34px 34px;
+  min-width: 340px;
+  max-width: 340px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.register-logo {
+  font-size: 2.6rem;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.register-header h1 {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #ffb347;
+  margin: 0;
+  letter-spacing: 2px;
+  text-shadow: 1px 2px 4px #23284836;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.register-subtitle {
+  font-size: 1.09rem;
+  margin-top: 12px;
+  color: #2e64ff;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.register-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.register-form label {
+  font-weight: 600;
+  color: #232848;
+  margin-bottom: 7px;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.register-form input {
+  margin-top: 8px;
+  padding: 13px 17px;
+  border-radius: 16px;
+  border: 1.5px solid #b6c4e6;
+  font-size: 1rem;
+  font-family: 'Inter', Arial, sans-serif;
+  background: #f6f7fa;
+  transition: border 0.17s, box-shadow 0.15s;
+  outline: none;
+}
+
+.register-form input:focus,
+.register-form input:hover {
+  border: 1.5px solid #2e64ff;
+  box-shadow: 0 0 0 2px #2e64ff22;
+}
+
+.register-btn {
+  margin-top: 12px;
+  padding: 15px 0;
+  border-radius: 32px;
+  border: none;
+  background: linear-gradient(90deg, #ffb347 0%, #ff6f00 100%);
+  color: #fff;
+  font-size: 1.13rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 3px 18px 0 #ffb34733;
+  transition: transform 0.13s, box-shadow 0.13s;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.register-btn:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.register-btn:hover:not(:disabled) {
+  /* No hover color change, only slight transform and shadow */
+  background: linear-gradient(90deg, #ffb347 0%, #ff6f00 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.register-error {
+  margin-top: -4px;
+  margin-bottom: 4px;
+  color: #d32f2f;
+  font-weight: 600;
+  font-size: 0.98rem;
+  text-align: left;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.register-links {
+  margin-top: 18px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 0.98rem;
+  text-align: center;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.register-links span + span {
+  margin-top: 8px;
+}
+
+.register-links a {
+  color: #2e64ff;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.14s;
+}
+
+.register-links a:hover {
+  color: #ffb347;
+}
+
+.register-footer {
+  width: 100vw;
+  text-align: center;
+  color: #e0e7fa;
+  padding: 20px 0 10px 0;
+  font-size: 1rem;
+  margin-top: auto;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+/* Responsive design for mobile (not full screen, looks nice) */
+@media (max-width: 600px) {
+  .register-bg {
+    padding: 0 0;
+  }
+  .register-container {
+    min-width: 90vw;
+    max-width: 96vw;
+    padding: 24px 4vw 18px 4vw;
+  }
+  .register-header h1 {
+    font-size: 1.5rem;
+  }
+  .register-logo {
+    font-size: 2rem;
+  }
+}
