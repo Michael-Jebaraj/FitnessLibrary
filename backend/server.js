@@ -88,6 +88,17 @@ app.get('/user/:userId/progress', async (req, res) => {
     const userId = req.params.userId;
     const user = await User.findById(userId);
     if (!user) return res.status(404).json({ message: "User not found" });
+    const now = new Date();
+    const monday = new Date(now);
+    monday.setHours(0,0,0,0);
+    monday.setDate(now.getDate() - ((now.getDay() + 6) % 7));
+
+    const lastReset = user.lastProgressReset;
+    if (!lastReset || new Date(lastReset).getTime() < monday.getTime()) {
+      user.progress = {};
+      user.lastProgressReset = now;
+      await user.save();
+    }
     res.json({ progress: user.progress || {} });
   } catch (error) {
     res.status(500).json({ message: "Failed to fetch progress", error });
