@@ -48,28 +48,7 @@ const Dashboard = () => {
   const [equipment, setEquipment] = useState("gym");
 
   // ---- Weekly progress reset logic (Only at/after 12:00 AM on Monday) ----
-  useEffect(() => {
-    if (userId) {
-      const lastReset = localStorage.getItem("progressLastReset");
-      const thisMonday = getMondayOfCurrentWeek().getTime();
-      const now = new Date();
-
-      // Only reset if:
-      // 1. It is Monday (getDay() === 1)
-      // 2. The time is after (or exactly) Monday 00:00
-      // 3. The last reset is before this Monday
-      if (
-        now.getDay() === 1 &&
-        now.getTime() >= thisMonday &&
-        (!lastReset || Number(lastReset) < thisMonday)
-      ) {
-        setProgress({});
-        localStorage.setItem("progressLastReset", String(thisMonday));
-        localStorage.setItem("userProgress", JSON.stringify({}));
-        axios.post(`https://fitnesslibrary.onrender.com/user/${userId}/progress`, { progress: {} });
-      }
-    }
-  }, [userId]);
+  
 
   // ---- Load progress from backend on mount ----
   useEffect(() => {
