@@ -12,6 +12,10 @@ const userSchema = new mongoose.Schema({
   progress: {
     type: Object,
     default: {}
+  },
+  lastProgressReset:{
+    type: Date,
+    default: null
   }
 });
 
